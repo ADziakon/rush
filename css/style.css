@@ -1,0 +1,17 @@
+:root {
+    --color1: #05b1b1;
+    --color2: #52339a;
+}
+header {
+    width:100%;
+    height: 100%;
+    
+    padding: 100px 0;
+    background: url(../img/bg.jpg);
+    /* background: url(../img/bg.jpg), -moz-linear-gradient(left, var(--color1) 0%, var(--color2) 100%) var(--color1);
+    background: url(../img/bg.jpg), -webkit-linear-gradient(left, var(--color1) 0%, var(--color2) 100%) var(--color1);
+    background: url(../img/bg.jpg), linear-gradient(left, var(--color1) 0%, var(--color2) 100%) var(--color1);
+     */
+    background-repeat: no-repeat;
+    background-size: contain;
+}
