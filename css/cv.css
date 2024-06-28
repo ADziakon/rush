@@ -1,0 +1,377 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fonts */
+:root {
+    --default-font: "Roboto",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --heading-font: "Raleway",  sans-serif;
+    --nav-font: "Poppins",  sans-serif;
+  }
+  
+  /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
+  :root { 
+    --background-color: #ffffff; /* Background color for the entire website, including individual sections */
+    --default-color: #272829; /* Default color used for the majority of the text content across the entire website */
+    --heading-color: #45505b; /* Color for headings, subheadings and title throughout the website */
+    --accent-color: #0563bb; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+    --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
+    --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
+  
+  
+  }
+  
+  /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
+  :root {
+    --nav-color: #45505b;  /* The default color of the main navmenu links */
+    --nav-hover-color: #0563bb; /* Applied to main navmenu links when they are hovered over or active */
+    --nav-mobile-background-color: #ffffff; /* Used as the background color for mobile navigation menu */
+    --nav-dropdown-background-color: #ffffff; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
+    --nav-dropdown-color: #212529; /* Used for navigation links of the dropdown items in the navigation menu. */
+    --nav-dropdown-hover-color: #0563bb; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
+  }
+/* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
+
+.light-background {
+    --background-color: #f9f9f9;
+    --surface-color: #ffffff;
+  }
+  
+  .dark-background {
+    --background-color: #060606;
+    --default-color: #ffffff;
+    --heading-color: #ffffff;
+    --surface-color: #252525;
+    --contrast-color: #ffffff;
+  }
+  
+  /* Smooth scroll */
+  :root {
+    scroll-behavior: smooth;
+  }
+
+  --------------------------------------------------------------*/
+body {
+  color: var(--default-color);
+  background-color: var(--background-color);
+  font-family: var(--default-font);
+}
+
+a {
+  color: var(--accent-color);
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+a:hover {
+  color: color-mix(in srgb, var(--accent-color), transparent 25%);
+  text-decoration: none;
+}
+header {
+    padding: 50px 0;
+    background-color: antiquewhite;
+    background-image: url(../img/background.jpg);
+    /* display: flex;
+    justify-content: right; */
+}
+footer {
+    background-color: antiquewhite;
+    background-image: url(../img/background.jpg);
+}
+
+.fixed-top {
+    padding: 50px;
+}
+/* .nav-bar{
+    width: 100%;
+    background-color: bisque;
+} */
+.nav-size{
+    max-width: 1000px;
+    /* display: flex;
+    justify-content: right; */
+    margin: 0 auto;
+    
+}
+.nav-link:hover {
+    background-color: rgb(93, 144, 219);
+    color: white;
+}
+.nav-link{
+    color:black;
+    /* background-color: rgb(93, 144, 219); */
+}
+.active {
+    background-color: rgb(201, 161, 32);
+}
+.title-box{
+    margin: 100px 0 50px 0;
+}
+.title{
+    
+}
+.subtitle{
+
+}
+main {
+    padding: 50px 20px;
+}
+.section-title{
+    /* padding: 50px 20px; */
+    padding-bottom: 50px;
+}
+/*--------------------------------------------------------------
+# Skills Section
+--------------------------------------------------------------*/
+.skill-section{
+    padding: 50px 20px;
+}
+.skills .progress {
+    height: 60px;
+    display: block;
+    background: none;
+    border-radius: 0;
+
+  }
+  
+  .skills .progress .skill {
+    color: var(--heading-color);
+    padding: 0;
+    margin: 0 0 6px 0;
+    text-transform: uppercase;
+    display: block;
+    font-weight: 600;
+    font-family: var(--heading-font);
+  }
+  
+  .skills .progress .skill .val {
+    float: right;
+    font-style: normal;
+  }
+  
+  .skills .progress-bar-wrap {
+    background: color-mix(in srgb, var(--default-color), transparent 90%);
+    height: 10px;
+  }
+  
+  .skills .progress-bar {
+    width: 100px;
+    height: 10px;
+    transition: 0.9s;
+    background-color: var(--accent-color);
+  }
+
+  /*--------------------------------------------------------------
+# Resume Section
+--------------------------------------------------------------*/
+.resume .resume-title {
+    color: var(--heading-color);
+    font-size: 26px;
+    font-weight: 700;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .resume .resume-item {
+    padding: 0 0 20px 20px;
+    margin-top: -2px;
+    border-left: 2px solid var(--accent-color);
+    position: relative;
+  }
+  
+  .resume .resume-item h4 {
+    line-height: 18px;
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: color-mix(in srgb, var(--default-color), transparent 20%);
+    margin-bottom: 10px;
+  }
+  
+  .resume .resume-item h5 {
+    font-size: 16px;
+    padding: 5px 15px;
+    display: inline-block;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+  
+  .resume .resume-item ul {
+    padding-left: 20px;
+  }
+  
+  .resume .resume-item ul li {
+    padding-bottom: 10px;
+  }
+  
+  .resume .resume-item:last-child {
+    padding-bottom: 0;
+  }
+  
+  .resume .resume-item::before {
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border-radius: 50px;
+    left: -9px;
+    top: 0;
+    background: var(--background-color);
+    border: 2px solid var(--accent-color);
+  }
+
+/*--------------------------------------------------------------
+# Contact Section
+--------------------------------------------------------------*/
+.section-title{
+    /* padding-top: 50px; */
+}
+.contact .info-item+.info-item {
+    margin-top: 40px;
+  }
+  .contact-section{
+    margin: 10px auto;
+    display: flex;
+    justify-content: center;
+  }
+  .contact-item{
+    padding-right: 50px;
+  }
+  .contact .info-item i {
+    color: var(--accent-color);
+    background: color-mix(in srgb, var(--accent-color), transparent 92%);
+    font-size: 20px;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    transition: all 0.3s ease-in-out;
+    margin-right: 15px;
+  }
+  
+  .contact .info-item h3 {
+    padding: 0;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 5px;
+  }
+  
+  .contact .info-item p {
+    padding: 0;
+    margin-bottom: 0;
+    font-size: 14px;
+  }
+  
+  .contact .info-item:hover i {
+    background: var(--accent-color);
+    color: var(--contrast-color);
+  }
+  
+  .contact .php-email-form {
+    height: 100%;
+  }
+  
+  .contact .php-email-form input[type=text],
+  .contact .php-email-form input[type=email],
+  .contact .php-email-form textarea {
+    font-size: 14px;
+    padding: 10px 15px;
+    box-shadow: none;
+    border-radius: 0;
+    color: var(--default-color);
+    background-color: color-mix(in srgb, var(--background-color), transparent 50%);
+    border-color: color-mix(in srgb, var(--default-color), transparent 80%);
+  }
+  
+  .contact .php-email-form input[type=text]:focus,
+  .contact .php-email-form input[type=email]:focus,
+  .contact .php-email-form textarea:focus {
+    border-color: var(--accent-color);
+  }
+  
+  .contact .php-email-form input[type=text]::placeholder,
+  .contact .php-email-form input[type=email]::placeholder,
+  .contact .php-email-form textarea::placeholder {
+    color: color-mix(in srgb, var(--default-color), transparent 70%);
+  }
+  
+  .contact .php-email-form button[type=submit] {
+    color: var(--contrast-color);
+    background: var(--accent-color);
+    border: 0;
+    padding: 10px 30px;
+    transition: 0.4s;
+    border-radius: 50px;
+  }
+  
+  .contact .php-email-form button[type=submit]:hover {
+    background: color-mix(in srgb, var(--accent-color), transparent 25%);
+  }
+  
+
+  /*--------------------------------------------------------------
+# Global Footer
+--------------------------------------------------------------*/
+.footer {
+    color: var(--default-color);
+    background-color: antiquewhite;
+    font-size: 14px;
+    text-align: center;
+    padding: 30px 0;
+    position: relative;
+  }
+  
+  .footer h3 {
+    font-size: 36px;
+    font-weight: 700;
+    position: relative;
+    padding: 0;
+    margin: 0 0 15px 0;
+  }
+  
+  .footer p {
+    font-size: 15;
+    font-style: italic;
+    padding: 0;
+    margin: 0 0 30px 0;
+  }
+  
+  .footer .social-links {
+    margin: 0 0 30px 0;
+  }
+  
+  .footer .social-links a {
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--accent-color);
+    color: var(--contrast-color);
+    line-height: 1;
+    margin: 0 4px;
+    border-radius: 50%;
+    text-align: center;
+    width: 36px;
+    height: 36px;
+    transition: 0.3s;
+  }
+  
+  .footer .social-links a:hover {
+    background: color-mix(in srgb, var(--accent-color), transparent 20%);
+    text-decoration: none;
+  }
+  
+  .footer .copyright {
+    padding-top: 25px;
+    border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+  }
+  
+  .footer .credits {
+    font-size: 13px;
+    padding-top: 5px;
+  }
