@@ -21,14 +21,20 @@ header {
     display: flex;
     justify-content: center;
     column-gap: 50px;
-    padding-top: 20px;
+    padding: 20px;
 }
 .btn-id{
     border: 1px solid #05b1b1;
     background-color: rgb(106, 187, 167);
     color: #FFF;
+    padding: 5px 20px;
+    transition: transform 0.3s ease;
 }
 .title-main{
     padding-top: 20px;
     padding-bottom: 20px;
+}
+.btn-id:hover {
+    background-color: rgb(92, 161, 138);
+    transform: scale(1.1);
 }
